@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+
+:root {
+ --bright-orange: hsl(31, 77%, 52%);
+ --dark-cyan: hsl(184, 100%, 22%);
+ --very-dark-cyan: hsl(179, 100%, 13%);
+ --white: hsl(0, 0%, 100%);
+ --transparent-white: hsla(0, 0%, 100%, 0.75);
+ --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*, *::before, *::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+.cards {
+ max-width: 200px;
+ margin: 0 auto;
+
+ .card {
+  padding: 1em 2em 2.1em;
+  color: var(--transparent-white);
+ }
+
+ img {
+  width: 2.5em;
+  margin-top: 1em;
+ }
+
+ .one {
+  background-color: var(--bright-orange);
+  border-radius: 7px 7px 0 0;
+
+  .button {
+   color: var(--bright-orange);
+  }
+ }
+
+ .two {
+  background-color: var(--dark-cyan);
+
+  .button {
+   color: var(--dark-cyan);
+  }
+ }
+
+ .three {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 7px 7px;
+
+  .button {
+   color: var(--very-dark-cyan);
+  }
+ }
+ 
+ .heading {
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0.8em auto;
+ }
+
+ .content {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.6rem;
+  line-height: 1.55;
+  margin-bottom: 2em;
+ }
+
+ .button {
+  background-color: var(--white);
+  text-decoration: none;
+  padding: 0.9em 2em;
+  border-radius: 25px;
+  font-size: 0.55rem;
+  font-family: 'Lexend Deca', sans-serif;
+
+  &:hover {
+   background-color: transparent;
+   color: var(--white);
+   outline: 1px solid var(--white);
+  }
+ }
+
+}
+
+// frontenmentor.io attribution
+.attribution {
+ font-family: 'Lexend Deca', sans-serif;
+ margin: 3em;
+ font-size: 11px; text-align: center; 
+}
+ 
+.attribution a {
+ color: hsl(228, 45%, 44%); 
+}
+// 
+
+@media screen and (min-width: 375px) {
+ body {
+  padding: 4em 0;
+ }
+}
+
+@media screen and (min-width: 700px) {
+ .cards {
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  max-width: 600px;
+  margin: 2em auto;
+
+  .one {
+   border-radius: 7px 0 0 7px;
+  }
+
+  .three {
+   border-radius: 0 7px 7px 0;
+  }
+
+  .content {
+   margin-bottom: 5em;
+  }
+ }
+}
+
+@media screen and (min-width: 1440px) {
+ body {
+  transform: scale(1.2);
+ }
+}
